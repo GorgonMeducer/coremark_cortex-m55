@@ -39,10 +39,6 @@
 /*============================ IMPLEMENTATION ================================*/
 
 
-void SysTick_Handler(void)
-{
-
-}
 
 
 int main(void)

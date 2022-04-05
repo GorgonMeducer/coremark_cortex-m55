@@ -23,6 +23,8 @@
 #include <assert.h>
 
 /*============================ MACROS ========================================*/
+#define ITERATIONS    3000
+
 /*============================ MACROFIED FUNCTIONS ===========================*/
 
 #define ASSERT(...)         assert(__VA_ARGS__)

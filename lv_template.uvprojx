@@ -336,10 +336,10 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>-Omax</MiscControls>
-              <Define></Define>
+              <MiscControls>-Omax -Wno-format</MiscControls>
+              <Define>COMPILER_FLAGS=\"-Omax\"</Define>
               <Undefine></Undefine>
-              <IncludePath>.\platform;.</IncludePath>
+              <IncludePath>.\platform;.;.\coremark;.\coremark\simple</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -417,6 +417,75 @@
         </Group>
         <Group>
           <GroupName>application</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>0</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>0</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>2</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
           <Files>
             <File>
               <FileName>main.c</FileName>
@@ -427,6 +496,51 @@
               <FileName>app_cfg.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\app_cfg.h</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Coremark</GroupName>
+          <Files>
+            <File>
+              <FileName>core_portme.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\simple\core_portme.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_portme.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\coremark\simple\core_portme.h</FilePath>
+            </File>
+            <File>
+              <FileName>core_list_join.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\core_list_join.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_main.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\core_main.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_matrix.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\core_matrix.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_state.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\core_state.c</FilePath>
+            </File>
+            <File>
+              <FileName>core_util.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\coremark\core_util.c</FilePath>
+            </File>
+            <File>
+              <FileName>coremark.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\coremark\coremark.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -486,48 +600,6 @@
           <targetInfo name="Cortex-M55_MPS3"/>
         </targetInfos>
       </component>
-      <component Cclass="Native Driver" Cgroup="Audio I2S" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="GPIO" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="I2C SBCon" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Timeout">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="IO" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="MPC" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="PPC" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="SPI" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
       <component Cclass="Native Driver" Cgroup="SysCounter" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
         <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
@@ -547,12 +619,6 @@
         </targetInfos>
       </component>
       <component Cclass="Native Driver" Cgroup="UART" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
-        <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
-        <targetInfos>
-          <targetInfo name="Cortex-M55_MPS3"/>
-        </targetInfos>
-      </component>
-      <component Cclass="Native Driver" Cgroup="Watch Dog" Cvendor="ARM" Cversion="1.0.0" condition="SSE-300-MPS3 Device">
         <package name="V2M_MPS3_SSE_300_BSP" schemaVersion="1.2" url="http://www.keil.com/pack/" vendor="ARM" version="1.2.0"/>
         <targetInfos>
           <targetInfo name="Cortex-M55_MPS3"/>
