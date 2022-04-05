@@ -189,7 +189,7 @@
             <hadIRAM2>1</hadIRAM2>
             <hadIROM2>0</hadIROM2>
             <StupSel>0</StupSel>
-            <useUlib>0</useUlib>
+            <useUlib>1</useUlib>
             <EndSel>1</EndSel>
             <uLtcg>0</uLtcg>
             <nSecure>2</nSecure>
@@ -336,7 +336,7 @@
             <v6WtE>0</v6WtE>
             <v6Rtti>0</v6Rtti>
             <VariousControls>
-              <MiscControls>-Omax -Wno-format</MiscControls>
+              <MiscControls>-Wno-format -Omax</MiscControls>
               <Define>COMPILER_FLAGS=\"-Omax\"</Define>
               <Undefine></Undefine>
               <IncludePath>.\platform;.;.\coremark;.\coremark\simple</IncludePath>

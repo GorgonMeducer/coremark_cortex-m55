@@ -112,12 +112,11 @@ void _sys_exit(int ret)
 
 #if defined(__MICROLIB)
 _ARMABI_NORETURN 
-ARM_NONNULL(1,2)
 void __aeabi_assert(const char *chCond, const char *chLine, int wErrCode) 
 {
-    ARM_2D_UNUSED(chCond);
-    ARM_2D_UNUSED(chLine);
-    ARM_2D_UNUSED(wErrCode);
+    UNUSED_PARAM(chCond);
+    UNUSED_PARAM(chLine);
+    UNUSED_PARAM(wErrCode);
     while(1) {
         __NOP();
     }
