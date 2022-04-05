@@ -1,0 +1,85 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.36.0.0
+Copyright (C) 2021 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Gabriel Wang, Arm, LIC=8MZ8R-4SGFZ-URV2J-SKIXW-62JWP-CFLZ6
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.36.0.0
+Toolchain Path:  C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\bin
+C Compiler:      GCC.exe
+Assembler:       AS.exe
+Linker/Locator:  LD.exe
+Library Manager: AR.exe
+Hex Converter:   OBJCOPY.exe
+CPU DLL:         
+Dialog DLL:      
+Target DLL:      CMSIS_AGDI_V8M.DLL V1.7.0.0
+Dialog DLL:      TCM.DLL V1.53.0.0
+ 
+<h2>Project:</h2>
+E:\git\coremark_cortex-m55\gcc_template.uvprojx
+Project File Date:  04/05/2022
+
+<h2>Output:</h2>
+Rebuild Project 'gcc_template' - Target 'Cortex-M55_MPS3'
+compiling serial.c...
+compiling platform.c...
+compiling perf_counter.c...
+compiling startup_fvp_sse300_mps3.c...
+compiling system_SSE300MPS3.c...
+compiling core_matrix.c...
+compiling core_main.c...
+compiling core_list_join.c...
+compiling core_util.c...
+compiling core_portme.c...
+compiling core_state.c...
+compiling EventRecorder.c...
+linking...
+After Build - User command #1: arm-none-eabi-size.exe ./Objects/gcc_template.elf
+   text	   data	    bss	    dec	    hex	filename
+  43328	   2528	   1356	  47212	   b86c	./Objects/gcc_template.elf
+".\Objects\gcc_template.elf" - 0 Error(s), 0 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.8.0.pack
+                ARM.CMSIS.5.8.0
+                CMSIS (Common Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.5.0
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.V2M_MPS3_SSE_300_BSP.1.2.0.pack
+                ARM.V2M_MPS3_SSE_300_BSP.1.2.0
+                ARM V2M-MPS3 Board Support PACK for CoreLink SSE-300 - TrustZone enabled subsystem for embedded.
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.ARM_Compiler.1.6.3.pack
+                Keil.ARM_Compiler.1.6.3
+                Keil ARM Compiler extensions for ARM Compiler 5 and ARM Compiler 6
+   * Component: Event Recorder Variant: DAP Version: 1.4.0
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\Compiler
+  .\RTE\_Cortex-M55_MPS3
+  C:\Users\gabriel\AppData\Local\Arm\Packs\ARM\CMSIS\5.8.0\CMSIS\Core\Include
+  C:\Users\gabriel\AppData\Local\Arm\Packs\ARM\V2M_MPS3_SSE_300_BSP\1.2.0\Device\Include
+  C:\Users\gabriel\AppData\Local\Arm\Packs\Keil\ARM_Compiler\1.6.3\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.5.0
+      Include file:  CMSIS\Core\Include\tz_context.h
+
+   * Component: Keil.ARM Compiler::Compiler:Event Recorder:DAP:1.4.0
+      Include file:  Include\EventRecorder.h
+      Source file:   Source\EventRecorder.c
+      Include file:  Config\EventRecorderConf.h
+Build Time Elapsed:  00:00:03
+</pre>
+</body>
+</html>

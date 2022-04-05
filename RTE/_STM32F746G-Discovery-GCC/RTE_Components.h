@@ -4,7 +4,7 @@
  *      *** Do not modify ! ***
  *
  * Project: 'gcc_template' 
- * Target:  'Cortex-M55_MPS3' 
+ * Target:  'STM32F746G-Discovery-GCC' 
  */
 
 #ifndef RTE_COMPONENTS_H
@@ -16,6 +16,8 @@
  */
 #define CMSIS_device_header "SSE300MPS3.h"
 
+/* GorgonMeducer.Performance Counter::Utilities:perf_counter:Core:Source:1.9.4-alpha */
+#define __PERF_COUNTER__
 /* Keil.ARM Compiler::Compiler:Event Recorder:DAP:1.4.0 */
 #define RTE_Compiler_EventRecorder
           #define RTE_Compiler_EventRecorder_DAP

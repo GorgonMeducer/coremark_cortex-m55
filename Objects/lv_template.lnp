@@ -1,0 +1,25 @@
+--cpu=Cortex-M55 --fpu=FPv5_D16 --lto
+".\objects\serial.o"
+".\objects\platform.o"
+".\objects\core_portme.o"
+".\objects\core_list_join.o"
+".\objects\core_main.o"
+".\objects\core_matrix.o"
+".\objects\core_state.o"
+".\objects\core_util.o"
+".\objects\driver_usart.o"
+".\objects\eventrecorder.o"
+".\objects\retarget_io.o"
+".\objects\device_definition.o"
+".\objects\startup_fvp_sse300_mps3.o"
+".\objects\system_sse300mps3.o"
+".\objects\syscounter_armv8-m_cntrl_drv.o"
+".\objects\syscounter_armv8-m_read_drv.o"
+".\objects\systimer_armv8-m_drv.o"
+".\objects\systimer_armv8-m_timeout.o"
+".\objects\uart_cmsdk_drv.o"
+"C:\Users\gabriel\AppData\Local\Arm\Packs\GorgonMeducer\perf_counter\1.9.4-alpha\lib\perf_counter.lib"
+--library_type=microlib --strict --scatter ".\RTE\Device\SSE-300-MPS3\fvp_sse300_mps3_s.sct"
+--diag_suppress=6314 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--info sizes --info totals --info unused --info veneers
+--list ".\Listings\lv_template.map" -o .\Objects\lv_template.axf

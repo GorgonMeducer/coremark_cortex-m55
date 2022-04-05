@@ -34,7 +34,10 @@
   Externals
  *----------------------------------------------------------------------------*/
 #if defined (__VTOR_PRESENT) && (__VTOR_PRESENT == 1U)
-    extern uint32_t __VECTOR_TABLE;
+
+typedef void( *pFunc )( void );
+    //extern uint32_t __VECTOR_TABLE;
+    extern const pFunc __VECTOR_TABLE[496] __VECTOR_TABLE_ATTRIBUTE;
 #endif
 
 /*----------------------------------------------------------------------------

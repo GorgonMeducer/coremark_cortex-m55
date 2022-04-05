@@ -111,6 +111,15 @@ void portable_init(core_portable *p, int *argc, char *argv[])
     
     printf("Coremark testing start...\r\n");
 }
+
+ volatile float s_fResult = 3.1415926f;
+
+__attribute__((used))
+void save_result(float fResult)
+{
+    s_fResult = fResult;
+}
+
 /* Function : portable_fini
 	Target specific final code 
 */

@@ -62,9 +62,19 @@
 
 void SysTick_Handler(void)
 {
+#if __IS_COMPILER_GCC__
+    user_code_insert_to_systick_handler();
+#endif
 
 }
 
+#if __IS_COMPILER_GCC__
+__WEAK
+void __ensure_systick_wrapper(void)
+{
+}
+
+#endif
 
 __WEAK 
 bool device_specific_init(void)
