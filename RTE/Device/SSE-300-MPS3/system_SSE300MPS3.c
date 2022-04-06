@@ -37,7 +37,7 @@
 
 typedef void( *pFunc )( void );
     //extern uint32_t __VECTOR_TABLE;
-    extern const pFunc __VECTOR_TABLE[496] __VECTOR_TABLE_ATTRIBUTE;
+    extern const pFunc __VECTOR_TABLE[496];
 #endif
 
 /*----------------------------------------------------------------------------

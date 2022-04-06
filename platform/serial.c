@@ -77,7 +77,7 @@ int fputc(int ch, FILE *f)
 
 #endif
 
-#if __IS_COMPILER_GCC__
+#if __IS_COMPILER_GCC__ || __IS_COMPILER_LLVM__
 
 static int stdout_putchar (int ch) {
   static uint32_t index = 0U;

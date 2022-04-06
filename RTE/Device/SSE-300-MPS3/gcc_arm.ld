@@ -50,7 +50,7 @@ __RAM_SIZE = 0x00080000;
     <o1> Heap Size (in Bytes) <0x0-0xFFFFFFFF:8>
   </h>
   -----------------------------------------------------------------------------*/
-__STACK_SIZE = 0x00008000;
+__STACK_SIZE = 0x00001000;
 __HEAP_SIZE  = 0x00000C00;
 
 /*
@@ -281,7 +281,7 @@ SECTIONS
   } > RAM2 AT > RAM2
 */
 
-  .heap (COPY) :
+  .heap (NOLOAD):
   {
     . = ALIGN(8);
     __end__ = .;
@@ -291,7 +291,7 @@ SECTIONS
     __HeapLimit = .;
   } > RAM
 
-  .stack (ORIGIN(RAM) + LENGTH(RAM) - __STACK_SIZE) (COPY) :
+  .stack (ORIGIN(RAM) + LENGTH(RAM) - __STACK_SIZE) (NOLOAD):
   {
     . = ALIGN(8);
     __StackLimit = .;
@@ -302,5 +302,5 @@ SECTIONS
   PROVIDE(__stack = __StackTop);
 
   /* Check if data + heap + stack exceeds RAM limit */
-  ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack")
+   ASSERT(__StackLimit >= __HeapLimit, "region RAM overflowed with stack") 
 }

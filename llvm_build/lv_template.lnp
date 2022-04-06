@@ -1,0 +1,30 @@
+
+".\serial.o"
+".\platform.o"
+".\perf_counter.o"
+".\core_portme.o"
+".\core_list_join.o"
+".\core_main.o"
+".\core_matrix.o"
+".\core_state.o"
+".\core_util.o"
+".\eventrecorder.o"
+".\device_definition.o"
+".\startup_fvp_sse300_mps3.o"
+".\system_sse300mps3.o"
+".\syscounter_armv8-m_cntrl_drv.o"
+".\syscounter_armv8-m_read_drv.o"
+".\systimer_armv8-m_drv.o"
+".\systimer_armv8-m_timeout.o"
+".\uart_cmsdk_drv.o"
+
+
+-L "C:\Program Files (x86)\GNU Arm Embedded Toolchain\10 2021.10\arm-none-eabi\lib\thumb\v8.1-m.main+mve\hard"
+-L"C:\Program Files (x86)\LLVMEmbeddedToolchainForArm\13.0.0\lib\clang-runtimes\armv8.1m.main_hard_fp\lib"
+
+
+"C:\Program Files (x86)\LLVMEmbeddedToolchainForArm\13.0.0\lib\clang-runtimes\armv8.1m.main_hard_fp\lib\crt0.o"
+
+-Map=".\Listings\llvm.map" -o .\Objects\lv_template.axf -T .\RTE\Device\SSE-300-MPS3\gcc_arm.ld -lnosys -lc_nano -lclang_rt.builtins-armv8.1m.main
+--gc-sections
+--Bstatic 

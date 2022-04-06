@@ -62,18 +62,30 @@
 
 void SysTick_Handler(void)
 {
-#if __IS_COMPILER_GCC__
+#if __IS_COMPILER_GCC__ || __IS_COMPILER_LLVM__
     user_code_insert_to_systick_handler();
 #endif
 
 }
 
-#if __IS_COMPILER_GCC__
+#if __IS_COMPILER_GCC__ || __IS_COMPILER_LLVM__
 __WEAK
 void __ensure_systick_wrapper(void)
 {
 }
 
+#endif
+
+#if __IS_COMPILER_LLVM__
+__WEAK void _init(void)
+{
+
+}
+
+__WEAK void _fini(void)
+{
+
+}
 #endif
 
 __WEAK 

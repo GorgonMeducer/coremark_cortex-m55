@@ -1,3 +1,0 @@
--T ./RTE/Device/SSE-300-MPS3/gcc_arm.ld -mthumb -mthumb-interwork -Wl,-Map="./gcc_template.map" -o "./Objects/gcc_template.elf" "./objects/platform.o" "./objects/serial.o" "./objects/perf_counter.o" "./objects/startup_fvp_sse300_mps3.o" "./objects/system_sse300mps3.o" "./objects/core_list_join.o" "./objects/core_main.o" "./objects/core_matrix.o" "./objects/core_state.o" "./objects/core_util.o" "./objects/core_portme.o" "./objects/eventrecorder.o" -lm --specs=nosys.specs -Wl,--gc-sections
--march=armv8.1-m.main+mve.fp+fp.dp -mtune=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -lc -ffunction-sections  -fdata-sections
--fshort-enums -fshort-wchar

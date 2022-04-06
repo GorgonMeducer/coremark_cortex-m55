@@ -53,7 +53,7 @@
           <CreateExecutable>1</CreateExecutable>
           <CreateLib>0</CreateLib>
           <CreateHexFile>0</CreateHexFile>
-          <DebugInformation>0</DebugInformation>
+          <DebugInformation>1</DebugInformation>
           <BrowseInformation>0</BrowseInformation>
           <ListingPath>.\</ListingPath>
           <HexFormatSelection>1</HexFormatSelection>
@@ -237,11 +237,11 @@
             <interw>1</interw>
             <bigend>0</bigend>
             <Strict>0</Strict>
-            <Optim>4</Optim>
+            <Optim>1</Optim>
             <wLevel>1</wLevel>
             <uThumb>1</uThumb>
             <VariousControls>
-              <MiscControls>-Ofast -flto -fomit-frame-pointer  -fdata-sections -ffunction-sections -fms-extensions -march=armv8.1-m.main+mve.fp+fp.dp -mtune=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -std=gnu11</MiscControls>
+              <MiscControls>-Ofast -fomit-frame-pointer  -fdata-sections -ffunction-sections -fms-extensions -march=armv8.1-m.main+mve.fp+fp.dp -mtune=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -std=gnu11</MiscControls>
               <Define>RTE_Compiler_IO_STDOUT_EVR,COMPILER_FLAGS=\"-Ofast\"</Define>
               <Undefine></Undefine>
               <IncludePath>.\RTE\Device\SSE-300-MPS3;.\platform;.;.\coremark;.\coremark\simple</IncludePath>
@@ -268,8 +268,7 @@
             <BSSAddressRange></BSSAddressRange>
             <IncludeLibs></IncludeLibs>
             <IncludeDir></IncludeDir>
-            <Misc>--specs=nosys.specs -Wl,--gc-sections
--march=armv8.1-m.main+mve.fp+fp.dp -mtune=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -lc -ffunction-sections  -fdata-sections
+            <Misc>--specs=nosys.specs -Wl,--gc-sections -march=armv8.1-m.main+mve.fp+fp.dp -mtune=cortex-m55 -mthumb -mfpu=fpv5-d16 -mfloat-abi=hard -lc_nano -ffunction-sections  -fdata-sections
 -fshort-enums -fshort-wchar</Misc>
             <ScatterFile>.\RTE\Device\SSE-300-MPS3\gcc_arm.ld</ScatterFile>
           </LDarm>

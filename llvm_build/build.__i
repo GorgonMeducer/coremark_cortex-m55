@@ -1,0 +1,50 @@
+-xc -std=gnu11 --target=arm-arm-none-eabi -mcpu=cortex-m55 -mfloat-abi=hard -c
+-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -mlittle-endian -gdwarf-4 -fdata-sections -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-parentheses-equality -I ./platform -I . -I ./coremark -I ./coremark/simple -Wno-format
+-I./RTE/Compiler
+-I./RTE/Device/SSE-300-MPS3
+-I./RTE/_Cortex-M55_MPS3
+
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Core/Include
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/CMSIS/5.8.0/CMSIS/Driver/Include
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Board/Device_Definition
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Board/Platform
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/CMSIS_Driver/Config
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/CMSIS_Driver/Include
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Device/Include
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/GorgonMeducer/perf_counter/1.9.4-alpha/lib
+-IC:/Users/gabriel/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.6.3/Include
+-D__UVISION_VERSION="536" -D_RTE_ -DCOMPILER_FLAGS="\"-Ofast\"" -MD 
+-D__ARM_ARCH_8M_MAIN__=1
+-DRTE_Compiler_IO_STDOUT_EVR=1
+
+--config armv8.1m.main_hard_fp_nosys
+
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/uart_cmsdk_drv.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Board/Device_Definition/device_definition.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/CMSIS_Driver/Driver_USART.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/Keil/ARM_Compiler/1.6.3/Source/EventRecorder.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/syscounter_armv8-m_cntrl_drv.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/syscounter_armv8-m_read_drv.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/systimer_armv8-m_drv.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/systimer_armv8-m_timeout.c"
+"C:/Users/gabriel/AppData/Local/Arm/Packs/ARM/V2M_MPS3_SSE_300_BSP/1.2.0/Native_Driver/uart_cmsdk_drv.c" 
+
+
+"coremark/core_list_join.c"
+"coremark/core_main.c"
+"coremark/core_matrix.c"
+"coremark/core_state.c"
+"coremark/core_util.c"
+"coremark/simple/core_portme.c"
+
+"platform/perf_counter.c"
+"platform/platform.c"
+"platform/serial.c"
+
+"RTE/Device/SSE-300-MPS3/startup_fvp_sse300_mps3.c"
+"RTE/Device/SSE-300-MPS3/system_SSE300MPS3.c"
+
+-g 
+
+-Ofast -lto
