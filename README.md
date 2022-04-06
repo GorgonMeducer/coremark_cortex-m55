@@ -38,7 +38,7 @@ This is a CoreMark project for Cortex-M55 comparing compilers such as gcc, llvm 
 | Best Performance | 4.51<br />ROM Size: 21136 | 3.18<br />ROM Size: 22208 | 2.808<br />ROM Size: 21632 | AC6: -Omax +lto;<br />GCC: -Ofast +lto;<br />LLVM uses: -Ofast+lto |
 | -Ofast           | 4.06<br />ROM Size: 19748 | 3.18<br />ROM Size: 22208 | 2.805<br />ROM Size: 19112 |                                                              |
 | -Ofast+lto       | 4.01<br />ROM Size: 17256 | 3.17<br />ROM Size: 21836 | 2.808<br />ROM Size: 21632 |                                                              |
-| Best Size        | 2.35<br />ROM Size: 12468 | 2.36<br />ROM Size: 55372 | 2.07<br />ROM Size: 37740  | AC6: -Omin +lto;<br />GCC: -Os +lto;<br />LLVM: -Oz+lto      |
+| Best Size        | 2.35<br />ROM Size: 12468 | 2.36<br />ROM Size: 13996 | 2.00<br />ROM Size: 13508  | AC6: -Omin +lto;<br />GCC: -Os +lto;<br />LLVM: -Oz+lto      |
 | -Oz              | 2.31<br />ROM Size: 13144 | 2.31<br />ROM Size: 14896 | 2.04<br />ROM Size: 14456  | GCC: -Os                                                     |
 | -Oz+lto          | 2.35<br />ROM Size: 12468 | 2.36<br />ROM Size: 13996 | 2.00<br />ROM Size: 13508  | GCC: -Os + lto                                               |
 | -Os              | 2.93<br />ROM Size: 13944 | 2.84<br />ROM Size: 15804 | n/a                        |                                                              |
