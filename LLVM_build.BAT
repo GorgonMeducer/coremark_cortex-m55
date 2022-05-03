@@ -1,4 +1,4 @@
-SET PATH=C:\Program Files (x86)\LLVMEmbeddedToolchainForArm\13.0.0\bin
+SET PATH=C:\Program Files (x86)\LLVMEmbeddedToolchainForArm\14.0.0\bin
 SET CPU_TYPE=SSE-300-MPS3
 SET CPU_VENDOR=ARM
 SET UV2_TARGET=Cortex-M55_MPS3
